@@ -15,14 +15,14 @@ const App = () => {
 
   const changeHandler = (e) => {
     setCurrentPlan(e.target.value);
-  };
-
-  const submitHandler = (e) => {
-    e.preventDefault();
     const filteredPlan = options.filter((value) => {
       return value.plan == currentPlan;
     });
     setPlanPrice(filteredPlan[0].price);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
   };
 
   return (
